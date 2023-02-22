@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, li, a, button {
+    font-family: "Impact", sans-serif;
+	font-weight: 500;
+	font-size: 2.5rem;
+	color: #fff;
+	text-decoration: none;
+}
+
+header {
+    background-image: url(src/header_bg.png);
+    background-size: cover;
+    padding: 15px 4%;
+    box-shadow: 3px 10px 100px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+
+  .nav_links {
+    display:    flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu{
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .menu:hover{
+    color: #fff;
+      background-color: #b94603d2;
+  }
+ /* .nav_links a:hover{
+      color: #fff;
+      background-color: #b94603d2;
+  }*/
+
+
+
+.wrapper{
+
+    min-height: 890px;
+    width: 100%;
+    background: url(src/main_frame.png) no-repeat;
+    background-size: 100% auto;
+}
+
+.main_about{
+    min-height: 25vh;
+    width: 100%;
+    background: url(src/header_bg.png) no-repeat;
+    background-size: 100% auto;
+    box-shadow: -3px -10px 500px 300px rgba(0, 0, 0, 0.5);
+}
+
+.go_buy_btn{
+    position: absolute;
+    right: 10%;
+    bottom: 5%;
+    border: 5px solid rgb(209, 111, 31);
+    border-radius: 50px;
+    background-color: rgba(250, 182, 93, 0.897);
+    padding: 10px 20px;
+    font-size: 3.5rem;
+    color: rgb(209, 111, 31);
+    transition: all 0.5s ease 0s
+
+}
+
+.go_buy_btn:hover{
+    scale: 1.1;
+
+}
+
+.logo{
+    width: 10%;
+}
+
+.logo img{
+    width: 100%;
+    transition: all 0.5s ease 0s
+}
+
+.logo img:hover{
+    scale: 1.2;
+}
+
+  
+  
+  
