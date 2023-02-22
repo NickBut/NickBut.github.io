@@ -2,6 +2,8 @@
 <html lang="ru" dir="ltr">
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="itc-slider.css" rel="stylesheet">
+        <script src="itc-slider.js" defer></script>
     </head>
     <body>
         <header>
@@ -16,11 +18,114 @@
             </nav>  
         </header>
         <div class="wrapper">
-          <!--  <img class="imgg" src="src/logo.png" alt="bist" > -->
+          <img class="img" src="src/main_frame.png" alt="bist" >
           <button class="go_buy_btn">К ПОКУПКАМ!</button>
         </div>
         <div class="main_about">
+          <img class="img" src="src/main_about_bg.png" alt="bist" >
+          <p class="main_about_content_left" style="font-size: 40px;">
+            PROFESSIONAL
+          </p>
+          <p class="main_about_content_left" style="top: 120px; font-size: 29px;">
+            FOOD FOR YOUR PETS
+          </p>
+          <p class="main_about_content_right">
+            Bist — сбалансированный корм, созданный с учётом особенностей и потребностей ваших питомцев. 
+            Чтобы обеспечить вашего любимца качественным питанием, 
+            мы включили в него животный белок, качественные жиры и использовали передовые технологии на сегодняшний день
+          </p>
+          <!--<table class="main_about_content">
+            <tr>
+                <td class="left">
+                    sfse
+                </td>
+                <td class="right">
+                    sfsf
+                </td>
+            </tr>
+          </table>-->
+        </div>
+        <div class="slider">
+            <div class="title">
+                <p style="text-align: center;font-size: 80px; scale: 1; padding-top: 60px;">
+                    ВСЕ ИНГРИДИЕНТЫ
+                </p>
+                <p style="text-align: center;font-size: 60px; padding-bottom: 60px; ">
+                    ОЧЕНЬ ВЫЖНЫ!
+                </p>
+            </div>   
 
+            <div class="slider_container">
+                <div class="image-container">
+                    <div class="image-wrapper">
+
+                      <div class="image-item">
+                        <p class="image" style="background: url(src/carrot.jpg); font-size: 60px;">МОРКОВЬ</p>
+                        <p class="image-description">Морковь — источник
+                            клетчатки, а также бета-каротина, который в
+                            организме преобразуется в
+                            витамин А.
+                        </p>   
+                      </div>
+
+                      <div class="image-item">
+                        <p class="image" style="background: url(src/meet.jpg); font-size: 60px;">МЯСО</p>
+                        <p class="image-description">Ингредиент № 1 в корме.
+                            Главный источник
+                            животного белка.
+                        </p>   
+                      </div>
+
+                      <div class="image-item">
+                        <p class="image" style="background: url(src/berry.jpg); font-size: 60px;">КЛЮКВА</p>
+                        <p class="image-description">Поддерживает здоровье
+                            мочеполовой системы и
+                            служит для профилактики
+                            мочекаменной болезни.
+                        </p>   
+                      </div>
+
+                      <div class="image-item">
+                        <p class="image" style="background: url(src/rosemary.jpg); font-size: 60px;">РОЗМАРИН</p>
+                        <p class="image-description">Розмарин является природным антиоксидантом и консервантом, помогает сохранить качество корма.
+                        </p>   
+                      </div>
+                     
+                    </div>
+                  </div>
+            </div>
+
+            
+            
         </div>
     </body>
+    <script>
+        const imageWrapper = document.querySelector('.image-wrapper')
+        const imageItems = document.querySelectorAll('.image-wrapper > *')
+        const imageLength = imageItems.length
+        const perView = 4
+        let totalScroll = 0
+        const delay = 5000
+
+        imageWrapper.style.setProperty('--per-view', perView)
+        for(let i = 0; i < perView; i++) {
+        imageWrapper.insertAdjacentHTML('beforeend', imageItems[i].outerHTML)
+        }
+
+        let autoScroll = setInterval(scrolling, delay)
+
+        function scrolling() {
+        totalScroll++
+        if(totalScroll == imageLength + 1) {
+            clearInterval(autoScroll)
+            totalScroll = 1
+            imageWrapper.style.transition = '0s'
+            imageWrapper.style.left = '0'
+            autoScroll = setInterval(scrolling, delay)
+        }
+        const widthEl = document.querySelector('.image-wrapper > :first-child').offsetWidth + 56
+        imageWrapper.style.left = `-${totalScroll * widthEl}px`
+        imageWrapper.style.transition = '.7s'
+        }
+    </script>
 </html>
