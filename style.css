@@ -117,7 +117,6 @@ header {
   }
 
   .slider{
-    min-height: 90vh;
     background: url(src/slider_bg.png) center center no-repeat;
     
   }
@@ -184,6 +183,57 @@ header {
 }
 /* IMAGE */
 
+.dash_1 img{
+    vertical-align: bottom;
+    position: relative;
+    width: 100%;
+    height: auto;  
+    box-shadow: 0px 200px 400px 300px rgba(0, 0, 0, 0.5);
+}
+
+.choose_pet{
+    background: url(src/choose_pet_bg.png);
+    text-shadow: 5px 5px 15px black;
+}
+
+.choose_btns{
+    z-index: 1;
+    padding: 0 15% 60px 15%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.choose_btns img{
+    transition: all 0.5s ease 0s;
+}
+
+.choose_btns img:hover{
+    scale: 1.15;
+}
+
+.dash_2 img{
+    vertical-align: bottom;
+    position: relative;
+    width: 100%;
+    height: auto;  
+    box-shadow: 0px 20px 400px 300px rgba(0, 0, 0, 0.5);
+}
+
+.change_racion{
+    background: url(src/slider_bg.png);
+    text-shadow: 5px 5px 15px black;
+}
+
+.dia{
+    padding: 0 15% 60px 15%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
   
   
   
